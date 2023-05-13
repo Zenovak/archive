@@ -1,0 +1,27 @@
+body{
+    background-color: #333647;
+    margin: 0;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fdfdfb;
+}
+
+/* Classes*/
+.TopMenu{
+    height: 5%;
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+.MiddleContainer{
+    background-color: #282a39;
+    padding: 50% 0 50% 0;
+}
+
+.MiddleContainer2{
+    background-color: #333647;
+    min-height: 100%;
+}
