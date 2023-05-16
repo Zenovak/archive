@@ -1,24 +1,49 @@
 body{
-    background-color: #333647;
+    background-color: #4C4B4C;
     margin: 0;
+    font-size: 2em;
 }
 
 h1{
     margin-top: 0;
     margin-bottom: 0;
     color: #fdfdfb;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
 }
+h2{
+    color: #fdfdfb;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+p{
+    font-size: 1.5rem;
+    color: #fdfdfb;
+
+}
+
+span{
+    margin: 5px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
 
 /* Classes*/
 .TopMenu{
     height: 5%;
     background-color: blueviolet;
-    padding: 10px;
+    padding: 30px 30px 10px 30px;
+    text-align: right;
 }
 
 .MiddleContainer{
-    background-color: #282a39;
-    padding: 50% 0 50% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #3c3c3b;
+    padding: 15% 8% 15% 8%;
 }
 
 .MiddleContainer2{
