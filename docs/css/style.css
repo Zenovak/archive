@@ -25,7 +25,7 @@ h2{
 p{
     color: #FDF4EA;
     font-family: Roboto, Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 1.5vw;
     font-weight: normal;
     margin: 1% 0 0 0;
 }
@@ -60,20 +60,23 @@ hr{
 }
 .navi{
     display: flex;
-    gap: 100px;
+    gap: 8%;
     flex-direction: row;
     justify-content: end;
 }
 
 .topBut {
-    font-size: 130%;
+    font-size: 1.4vw;
     background: transparent;
     border: none;
     color: #FDF4EA;
     position: relative;
     text-align: center;
     transform-origin: bottom;
-    width: 100px;
+
+    box-sizing: border-box;
+    padding: 0 10px 0 10px;
+
     transition: 0.3s;
 }
 .topBut::before {
@@ -81,7 +84,7 @@ hr{
     position: absolute;
     left: 0;
     bottom: 0;
-    top: 35px;
+    top: 140%;
     height: 2px;
     width: 0;
     background-color: #F0D4B3;
@@ -166,12 +169,14 @@ hr{
     padding: 10% 0 8% 0;
     text-align: center;
 } */
-
+.bannerWrapper{
+    display: block;
+}
 .cardsBanner {
     display: grid;
     grid-template-columns: 1fr 1.618fr;
-    gap: 4%;
-    margin-bottom: 10%;
+
+    gap: 40px;
 }
 .cardsGeneric {
     border-style: solid;
@@ -190,11 +195,10 @@ hr{
 .textWrapper{
     display: flex;
     flex-direction: column;
-
+    width: 100%;
     flex:none;
-
-    font-size: 10em;
 }
+
 .iconWrapper{
     height: 100%;
     display: flex;
@@ -281,14 +285,17 @@ footer{
 /* Constructions */
 
 .underConstruction{
+    box-sizing: content-box;
     text-align: center;
+    display: grid;
+    grid-template-rows: auto;
 }
 
 .lineWrapper{
     display: flex;
     justify-content: center;
     margin-top: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .underConstruction > hr{
@@ -530,7 +537,13 @@ footer{
 @media (max-width: 920px){
 
     h1{
-        font-size: 10vw;
+        font-size: 11vw;
+    }
+    h2{
+        font-size: 5.5vw;
+    }
+    p {
+        font-size: 3.5vw;
     }
 
     .TopMenu{
@@ -539,6 +552,12 @@ footer{
     .navi{
         justify-content: center;
     }
+    .topBut{
+        font-size: 3vw;
+        min-width: 20%;
+    }
+    
+
 
     .topBanner{
         grid-template-columns: 1fr;
@@ -550,6 +569,15 @@ footer{
     }
 
     .cardsBanner{
-        grid-template-columns: 1fr;
+        grid-template-columns: none;
+    }
+
+    .cardsGeneric > .textWrapper > h2{
+        font-size: 6vw;
+    }
+
+    .underConstruction{
+        margin-top: 10vw;
+        gap: 10vw;
     }
 }
