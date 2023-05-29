@@ -321,6 +321,7 @@ footer{
     border-radius: 6%;
     animation: shake 3s ease-in-out infinite;
     transform-origin: 60px 180px;
+    box-shadow: 0 2px 4px #4C4B4C;
 
     margin-left: auto;
     margin-right: auto;
