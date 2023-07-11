@@ -4740,9 +4740,13 @@ var winingPositions = new uint16[8];
 <span class="token keyword">else</span> <span class="token punctuation">{</span>
     <span class="token comment">// Since turn is binary and our board is also 2 entries...</span>
     board<span class="token punctuation">[</span>turn<span class="token punctuation">]</span> <span class="token operator">&amp;=</span> moveMask<span class="token punctuation">;</span>
-    <span class="token function">CheckWinners</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+" turn" <span class="token punctuation">~=</span> " 1" <span class="token punctuation">;</span>
+	<span class="token function">CheckWinners</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code><button class="copy-code-button">Copy</button></pre></div><div><br></div><div><h3 data-heading="Calculating the moveMask" id="Calculating_the_moveMask" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Calculating the moveMask</h3></div><div><p>How do we calculate the moveMask say if we were to expose our function makeMoves function to an end User, where it accepts an index number or a Vector2 as an input.</p></div><div><p>There are a few solutions to this: </p></div><div><ol>
+</code><button class="copy-code-button">Copy</button></pre></div>
+				<div><p>Here we can flip the turn very easily with just a bitwise "XOR" operator.</p></div>
+				
+				<div><br></div><div><h3 data-heading="Calculating the moveMask" id="Calculating_the_moveMask" style="display: flex;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Calculating the moveMask</h3></div><div><p>How do we calculate the moveMask say if we were to expose our function makeMoves function to an end User, where it accepts an index number or a Vector2 as an input.</p></div><div><p>There are a few solutions to this: </p></div><div><ol>
 <li data-line="0">
 <p><strong>Precalculated jump tables</strong>: Write down all possible moveMask by hand, and hard code them into a Dictionary where the values are the moveMask and the keys are in Vector2 or integer index.</p>
 </li>
