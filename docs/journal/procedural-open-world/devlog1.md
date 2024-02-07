@@ -17,7 +17,7 @@ Different voxel engines may define different chunk sizes. but chunking is defini
 We can use this chunks system to then store our blocks. and these chunks would then be a part of our larger world. 
 
 
-![[attachments/minecraftChunk.png]]
+![](attachments/minecraftChunk.png)
 
 Therefore chunks would need to have a few fundamental properties to store its data of blocks, and its location in our world. 
 
